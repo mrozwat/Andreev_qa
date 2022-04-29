@@ -1,0 +1,1397 @@
+{
+	"info": {
+		"_postman_id": "8b480f0a-ae99-4d16-a36f-9e4b1ca762b6",
+		"name": "Django",
+		"description": "Test description",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "autotest",
+			"item": [
+				{
+					"name": "api auth reg create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"var randomstring = Math.random().toString(36).slice(-8);\r",
+									"pm.environment.set(\"pas\", randomstring);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"set name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.environment.set(\"name\", jsonData.username);\r",
+									"\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"var schema = {\r",
+									"    \"$schema\": \"http://json-schema.org/draft/2019-09/schema\",\r",
+									"    \"$id\": \"http://example.com/example.json\",\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"required\": [\r",
+									"        \"username\",\r",
+									"        \"password\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"username\": {\r",
+									"            \"title\": \"The username Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Adriel\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"password\": {\r",
+									"            \"title\": \"The password Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"pbkdf2_sha256$320000$ApM3MaFHN06wiAYwElVygL$sSOa+C+q95sMbbVa3TDcBCxVMRrUUL9stQkmzhS2nDY=\"\r",
+									"            ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"username\": \"Adriel\",\r",
+									"        \"password\": \"pbkdf2_sha256$320000$ApM3MaFHN06wiAYwElVygL$sSOa+C+q95sMbbVa3TDcBCxVMRrUUL9stQkmzhS2nDY=\"\r",
+									"    }]\r",
+									"};\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;  \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"{{$randomFirstName}}\",\n  \"password\": \"{{pas}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/reg",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"reg"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/reg",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"reg"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"B\",\n  \"password\": \"consequat ad\"\n}"
+						}
+					]
+				},
+				{
+					"name": "auth token create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"set token\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.environment.set(\"authToken\", jsonData.token);\r",
+									"\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"$schema\": \"http://json-schema.org/draft/2019-09/schema\",\r",
+									"    \"$id\": \"http://example.com/example.json\",\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"required\": [\r",
+									"        \"token\",\r",
+									"        \"username\",\r",
+									"        \"password\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"token\": {\r",
+									"            \"title\": \"The token Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"ba74172f76e61d6004da7a9ff1ec17717eb68bc5\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"username\": {\r",
+									"            \"title\": \"The username Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Libbie\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"password\": {\r",
+									"            \"title\": \"The password Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"6dpwtnqq\"\r",
+									"            ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"token\": \"ba74172f76e61d6004da7a9ff1ec17717eb68bc5\",\r",
+									"        \"username\": \"Libbie\",\r",
+									"        \"password\": \"6dpwtnqq\"\r",
+									"    }]\r",
+									"};\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;  \r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{pas}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{name}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"{{name}}\",\n  \"password\": \"{{pas}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"token"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"nulla non aute voluptate\",\n  \"password\": \"occaecat eiusmod\",\n  \"token\": \"ea labore Excepteur non\"\n}"
+						}
+					]
+				},
+				{
+					"name": "api user password update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var randomstring = Math.random().toString(36).slice(-8);\r",
+									"pm.environment.set(\"pasnew\", randomstring);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"$schema\": \"http://json-schema.org/draft/2019-09/schema\",\r",
+									"    \"$id\": \"http://example.com/example.json\",\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"required\": [\r",
+									"        \"old_password\",\r",
+									"        \"new_password1\",\r",
+									"        \"new_password2\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"old_password\": {\r",
+									"            \"title\": \"The old_password Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"6dpwtnqq\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"new_password1\": {\r",
+									"            \"title\": \"The new_password1 Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"pdwizkcl\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"new_password2\": {\r",
+									"            \"title\": \"The new_password2 Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"pdwizkcl\"\r",
+									"            ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"old_password\": \"6dpwtnqq\",\r",
+									"        \"new_password1\": \"pdwizkcl\",\r",
+									"        \"new_password2\": \"pdwizkcl\"\r",
+									"    }]\r",
+									"};\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;  \r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{pas}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{name}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"old_password\": \"{{pas}}\",\n  \"new_password1\": \"{{pasnew}}\",\n  \"new_password2\": \"{{pasnew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user/password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/password",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"old_password\": \"ad\",\n  \"new_password1\": \"irure dolor off\",\n  \"new_password2\": \"ad nisi ma\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authcratenewToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"set token\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.environment.set(\"newtoken\", jsonData.token);\r",
+									"\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"var schema = {\r",
+									"    \"$schema\": \"http://json-schema.org/draft/2019-09/schema\",\r",
+									"    \"$id\": \"http://example.com/example.json\",\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"required\": [\r",
+									"        \"token\",\r",
+									"        \"username\",\r",
+									"        \"password\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"token\": {\r",
+									"            \"title\": \"The token Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"c9b8d313cc84de8b91805f645e7ff1bf13214725\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"username\": {\r",
+									"            \"title\": \"The username Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Gladys\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"password\": {\r",
+									"            \"title\": \"The password Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"2o8v0vby\"\r",
+									"            ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"token\": \"c9b8d313cc84de8b91805f645e7ff1bf13214725\",\r",
+									"        \"username\": \"Gladys\",\r",
+									"        \"password\": \"2o8v0vby\"\r",
+									"    }]\r",
+									"};\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;  \r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{pasnew}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{name}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"{{name}}\",\n  \"password\": \"{{pasnew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api user all list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var name1 = pm.environment.get(\"name\");\r",
+									"var json = pm.response.json().filter(h => h.username == name1)[0].id;\r",
+									"pm.environment.set(\"id\", json);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"var schema = {\r",
+									"    \"$schema\": \"http://json-schema.org/draft/2019-09/schema\",\r",
+									"    \"$id\": \"http://example.com/example.json\",\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"type\": \"array\",\r",
+									"    \"default\": [],\r",
+									"    \"items\": {\r",
+									"        \"title\": \"A Schema\",\r",
+									"        \"type\": \"object\",\r",
+									"        \"default\": {},\r",
+									"        \"required\": [\r",
+									"            \"id\",\r",
+									"            \"username\",\r",
+									"            \"email\",\r",
+									"            \"first_name\",\r",
+									"            \"last_name\"\r",
+									"        ],\r",
+									"        \"properties\": {\r",
+									"            \"id\": {\r",
+									"                \"title\": \"The id Schema\",\r",
+									"                \"type\": \"integer\",\r",
+									"                \"default\": 0,\r",
+									"                \"examples\": [\r",
+									"                    826\r",
+									"                ]\r",
+									"            },\r",
+									"            \"username\": {\r",
+									"                \"title\": \"The username Schema\",\r",
+									"                \"type\": \"string\",\r",
+									"                \"default\": \"\",\r",
+									"                \"examples\": [\r",
+									"                    \"Garfield.Hartmann\"\r",
+									"                ]\r",
+									"            },\r",
+									"            \"email\": {\r",
+									"                \"title\": \"The email Schema\",\r",
+									"                \"type\": \"string\",\r",
+									"                \"default\": \"\",\r",
+									"                \"examples\": [\r",
+									"                    \"Dario_Oberbrunner33@hotmail.com\"\r",
+									"                ]\r",
+									"            },\r",
+									"            \"first_name\": {\r",
+									"                \"title\": \"The first_name Schema\",\r",
+									"                \"type\": \"string\",\r",
+									"                \"default\": \"\",\r",
+									"                \"examples\": [\r",
+									"                    \"Adolphus\"\r",
+									"                ]\r",
+									"            },\r",
+									"            \"last_name\": {\r",
+									"                \"title\": \"The last_name Schema\",\r",
+									"                \"type\": \"string\",\r",
+									"                \"default\": \"\",\r",
+									"                \"examples\": [\r",
+									"                    \"Pfannerstill\"\r",
+									"                ]\r",
+									"            }\r",
+									"        },\r",
+									"        \"examples\": [{\r",
+									"            \"id\": 826,\r",
+									"            \"username\": \"Garfield.Hartmann\",\r",
+									"            \"email\": \"Dario_Oberbrunner33@hotmail.com\",\r",
+									"            \"first_name\": \"Adolphus\",\r",
+									"            \"last_name\": \"Pfannerstill\"\r",
+									"        }]\r",
+									"    },\r",
+									"    \"examples\": [\r",
+									"        [{\r",
+									"            \"id\": 826,\r",
+									"            \"username\": \"Garfield.Hartmann\",\r",
+									"            \"email\": \"Dario_Oberbrunner33@hotmail.com\",\r",
+									"            \"first_name\": \"Adolphus\",\r",
+									"            \"last_name\": \"Pfannerstill\"\r",
+									"        }]\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;  \r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{pasnew}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{name}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/user/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"username\": \"3MdXh+jq\",\n    \"id\": 92926213,\n    \"email\": \"UO4JB4qbuT@yXmlQywbZZbZXHMHfWCRfdhouMeCKZ.qys\",\n    \"first_name\": \"eiusmod \",\n    \"last_name\": \"culpa sunt\"\n  },\n  {\n    \"username\": \"Np.\",\n    \"id\": 80969066,\n    \"email\": \"jDwr6Vg9@nfXadbkPbXOwQTvLJxkO.upi\",\n    \"first_name\": \"et \",\n    \"last_name\": \"minim dolore amet laborum\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "api user update profile update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"\r",
+									"function RandArray(array){\r",
+									"    var rand = Math.random()*array.length | 0;\r",
+									"    var rValue = array[rand];\r",
+									"    return rValue;\r",
+									"}\r",
+									"var myArray = ['a', 'b', 'c', 'd', 'q', ];\r",
+									"var rValue = RandArray(myArray);\r",
+									"pm.environment.set(\"familystatus\", rValue);\r",
+									"\r",
+									"function RandArray(array){\r",
+									"    var rand = Math.random()*array.length | 0;\r",
+									"    var rValue = array[rand];\r",
+									"    return rValue;\r",
+									"}\r",
+									"var myArray = ['M', 'F', 'N' ];\r",
+									"var gender = RandArray(myArray);\r",
+									"pm.environment.set(\"gender\", gender);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"var schema = {\r",
+									"    \"$schema\": \"http://json-schema.org/draft/2019-09/schema\",\r",
+									"    \"$id\": \"http://example.com/example.json\",\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"required\": [\r",
+									"        \"username\",\r",
+									"        \"first_name\",\r",
+									"        \"last_name\",\r",
+									"        \"email\",\r",
+									"        \"city\",\r",
+									"        \"country\",\r",
+									"        \"family_status\",\r",
+									"        \"gender\",\r",
+									"        \"birth_date\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"username\": {\r",
+									"            \"title\": \"The username Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Jon63\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"first_name\": {\r",
+									"            \"title\": \"The first_name Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Andreanne\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"last_name\": {\r",
+									"            \"title\": \"The last_name Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Nikolaus\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"email\": {\r",
+									"            \"title\": \"The email Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Beryl90@yahoo.com\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"city\": {\r",
+									"            \"title\": \"The city Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Thompsonhaven\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"country\": {\r",
+									"            \"title\": \"The country Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Qatar\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"family_status\": {\r",
+									"            \"title\": \"The family_status Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"q\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"gender\": {\r",
+									"            \"title\": \"The gender Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"N\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"birth_date\": {\r",
+									"            \"title\": \"The birth_date Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"1921-02-21\"\r",
+									"            ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"username\": \"Jon63\",\r",
+									"        \"first_name\": \"Andreanne\",\r",
+									"        \"last_name\": \"Nikolaus\",\r",
+									"        \"email\": \"Beryl90@yahoo.com\",\r",
+									"        \"city\": \"Thompsonhaven\",\r",
+									"        \"country\": \"Qatar\",\r",
+									"        \"family_status\": \"q\",\r",
+									"        \"gender\": \"N\",\r",
+									"        \"birth_date\": \"1921-02-21\"\r",
+									"    }]\r",
+									"};\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;  \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{pasnew}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{name}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"{{$randomUserName}}\",\n  \"first_name\": \"{{$randomFirstName}}\",\n  \"last_name\": \"{{$randomLastName}}\",\n  \"email\": \"{{$randomEmail}}\",\n  \"city\": \"{{$randomCity}}\",\n  \"country\": \"{{$randomCountry}}\",\n  \"family_status\": \"{{familystatus}}\",\n  \"gender\": \"{{gender}}\",\n  \"birth_date\": \"1921-02-21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user/update/profile/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update",
+								"profile",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/update/profile/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update",
+										"profile",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "15363701",
+											"description": "(Required) A unique integer value identifying this user."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"ak\",\n  \"first_name\": \"exercitation officia elit aliquip\",\n  \"last_name\": \"sit sunt\",\n  \"email\": \"0RAohROByl-GdPv@ztNUHeSiCNcAoPBAAZzEePj.tjqb\",\n  \"city\": \"m\",\n  \"country\": \"id\",\n  \"family_status\": \"q\",\n  \"gender\": \"F\",\n  \"birth_date\": \"1967-04-06\"\n}"
+						}
+					]
+				},
+				{
+					"name": "user read",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"$schema\": \"http://json-schema.org/draft/2019-09/schema\",\r",
+									"    \"$id\": \"http://example.com/example.json\",\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"required\": [\r",
+									"        \"id\",\r",
+									"        \"username\",\r",
+									"        \"email\",\r",
+									"        \"first_name\",\r",
+									"        \"last_name\",\r",
+									"        \"date_joined\",\r",
+									"        \"birth_date\",\r",
+									"        \"city\",\r",
+									"        \"country\",\r",
+									"        \"family_status\",\r",
+									"        \"gender\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"id\": {\r",
+									"            \"title\": \"The id Schema\",\r",
+									"            \"type\": \"integer\",\r",
+									"            \"default\": 0,\r",
+									"            \"examples\": [\r",
+									"                1378\r",
+									"            ]\r",
+									"        },\r",
+									"        \"username\": {\r",
+									"            \"title\": \"The username Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Jon63\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"email\": {\r",
+									"            \"title\": \"The email Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Beryl90@yahoo.com\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"first_name\": {\r",
+									"            \"title\": \"The first_name Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Andreanne\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"last_name\": {\r",
+									"            \"title\": \"The last_name Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Nikolaus\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"date_joined\": {\r",
+									"            \"title\": \"The date_joined Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"2022-04-29T16:40:01.051577Z\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"birth_date\": {\r",
+									"            \"title\": \"The birth_date Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"1921-02-21\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"city\": {\r",
+									"            \"title\": \"The city Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Thompsonhaven\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"country\": {\r",
+									"            \"title\": \"The country Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"Qatar\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"family_status\": {\r",
+									"            \"title\": \"The family_status Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"q\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"gender\": {\r",
+									"            \"title\": \"The gender Schema\",\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"examples\": [\r",
+									"                \"N\"\r",
+									"            ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"id\": 1378,\r",
+									"        \"username\": \"Jon63\",\r",
+									"        \"email\": \"Beryl90@yahoo.com\",\r",
+									"        \"first_name\": \"Andreanne\",\r",
+									"        \"last_name\": \"Nikolaus\",\r",
+									"        \"date_joined\": \"2022-04-29T16:40:01.051577Z\",\r",
+									"        \"birth_date\": \"1921-02-21\",\r",
+									"        \"city\": \"Thompsonhaven\",\r",
+									"        \"country\": \"Qatar\",\r",
+									"        \"family_status\": \"q\",\r",
+									"        \"gender\": \"N\"\r",
+									"    }]\r",
+									"};\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;  \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"{{id}}"
+							]
+						},
+						"description": "Получаем пользователя"
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "15363701",
+											"description": "(Required) A unique integer value identifying this user."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"username\": \"08036uIYu\",\n  \"id\": -71112035,\n  \"email\": \"jHmk7@rhx.qacv\",\n  \"first_name\": \"id mollit enim\",\n  \"last_name\": \"consequat Duis veniam\",\n  \"date_joined\": \"1973-01-08T00:36:55.210Z\",\n  \"birth_date\": \"1966-09-04\",\n  \"city\": \"in qui ullamco\",\n  \"country\": \"co\",\n  \"family_status\": \"c\",\n  \"gender\": \"F\"\n}"
+						}
+					]
+				},
+				{
+					"name": "user delete delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Token {{newtoken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/delete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"delete"
+							]
+						},
+						"description": "Retrieve, update or delete a snippet instance."
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user/delete",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"delete"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "{{name}}",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://social.krotovqa.com",
+			"type": "string"
+		}
+	]
+}
