@@ -1,0 +1,28 @@
+2022-05-06 22:44:47.297 30460-30460/com.squareup.timessquare.sample D/TimesSquare: Adding month MonthDescriptor{label='декабрь 2019 г.', month=11, year=2019}
+2022-05-06 22:44:47.298 30460-30460/com.squareup.timessquare.sample D/AndroidRuntime: Shutting down VM
+2022-05-06 22:44:47.298 30460-30460/com.squareup.timessquare.sample W/essquare.sampl: Accessing hidden method Lcom/msic/qarth/PatchStore;->createDisableExceptionQarthFile(Ljava/lang/Throwable;)Z (blacklist, JNI)
+2022-05-06 22:44:47.298 30460-30460/com.squareup.timessquare.sample E/essquare.sampl: [qarth_debug:]  get PatchStore::createDisableExceptionQarthFile method fail.
+2022-05-06 22:44:47.299 30460-30460/com.squareup.timessquare.sample E/AndroidRuntime: FATAL EXCEPTION: main
+    Process: com.squareup.timessquare.sample, PID: 30460
+    java.lang.IllegalArgumentException: SelectedDate must be between minDate and maxDate.
+    minDate: Sat Jan 01 00:00:00 GMT+03:00 2000
+    maxDate: Tue Dec 31 23:59:00 GMT+03:00 2019
+    selectedDate: Fri May 06 22:44:46 GMT+03:00 2022
+        at com.squareup.timessquare.CalendarPickerView.validateDate(CalendarPickerView.java:684)
+        at com.squareup.timessquare.CalendarPickerView.selectDate(CalendarPickerView.java:620)
+        at com.squareup.timessquare.CalendarPickerView.selectDate(CalendarPickerView.java:605)
+        at com.squareup.timessquare.CalendarPickerView$FluentInitializer.withSelectedDates(CalendarPickerView.java:371)
+        at com.squareup.timessquare.CalendarPickerView$FluentInitializer.withSelectedDate(CalendarPickerView.java:354)
+        at com.squareup.timessquare.sample.SampleTimesSquareActivity$3.onClick(SampleTimesSquareActivity.java:111)
+        at android.view.View.performClick(View.java:6659)
+        at android.view.View.performClickInternal(View.java:6631)
+        at android.view.View.access$3100(View.java:790)
+        at android.view.View$PerformClick.run(View.java:26187)
+        at android.os.Handler.handleCallback(Handler.java:907)
+        at android.os.Handler.dispatchMessage(Handler.java:105)
+        at android.os.Looper.loop(Looper.java:216)
+        at android.app.ActivityThread.main(ActivityThread.java:7625)
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:524)
+        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:987)
+2022-05-06 22:44:47.348 30460-30460/com.squareup.timessquare.sample I/Process: Sending signal. PID: 30460 SIG: 9

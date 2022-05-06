@@ -1,0 +1,4 @@
+Приложение для теста  https://github.com/square/android-times-square/tree/android-times-square-parent-1.7.10
+телефон honor 9 android 9  build 9.1.0.232
+Краш при открытие вкладки highlight
+Логи снимались через android studio
