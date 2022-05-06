@@ -1,0 +1,3 @@
+Сайт у которого тестировалась api https://social.krotovqa.com/
+Документация https://social.krotovqa.com/redoc/
+Swager doc https://social.krotovqa.com/swagger/
