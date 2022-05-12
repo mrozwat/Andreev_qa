@@ -8,11 +8,14 @@ class HomepageNav(SeleniumBase):
         super().__init__(driver)
         self.driver = driver
         self.__nav_links: str = '#mainNavigationFobs>li'
+        self.NAV_LINK_TEXT = 'Gifts,Women,Men,Kids & Baby,Beauty,Home,Furniture,Shoes,Jewelry,Handbags & Accessories,Now Trending,Sale'
 
     def get_nav_links(self) -> List[WebElement]:
-        self.are_visible('css', self.__nav_links, 'Headear Navigation Links')
+        '''Return WebElements for nav links'''
+        return self.are_visible('css', self.__nav_links, 'Header Navigation Links')
 
     def get_nav_links_text(self) -> str:
+        '''Return all nav links text. Return format is a String with comma separated values'''
         nav_links = self.get_nav_links()
-        nav_links_text = [link.text for link in nav_links]
-        return ",".join(nav_links_text)
+        nav_links_text = self.get_text_from_webelements(nav_links)
+        return ','.join(nav_links_text)

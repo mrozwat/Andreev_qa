@@ -8,7 +8,7 @@ from typing import List
 class SeleniumBase:
  def __init__(self, driver):
      self.driver = driver
-     self.wait = WebDriverWait(driver, 15)
+     self.wait = WebDriverWait(driver, 10)
 
  def __get_selenium_by(self, find_by: str) -> dict:
      find_by = find_by.lower()
