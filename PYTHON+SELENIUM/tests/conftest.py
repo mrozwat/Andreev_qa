@@ -15,8 +15,8 @@ def get_chrome_options():
 def get_webdriver(get_chrome_options):
     options= get_chrome_options
     driver= webdriver.Chrome(options=options)
-    #D:\github\Andreev_qa\PYTHON + SELENIUM\chromedrive
-    #luche ybrari probelu
+    #D:\github\Andreev_qa\PYTHON+SELENIUM\chromedrive
+
     return driver
 
 @pytest.fixture(scope='function')
