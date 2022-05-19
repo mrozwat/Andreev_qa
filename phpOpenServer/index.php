@@ -1,9 +1,10 @@
 <?php
-$title = 'Мой сайт';
+$title = 'Poc';
 $name = 'Неопознанный енот';
 $image = 'img/unknown-raccoon.svg';
 $email = 'enot_neopoznanniy@gmail.com';
 $phone = '+79876543210';
+$tg = 'OZwat';
 
 require('components/header.php');
 require('components/about.php');

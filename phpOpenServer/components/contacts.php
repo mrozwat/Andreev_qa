@@ -5,6 +5,6 @@
       <p class="contacts-name"><?= $name ?></p>
       <p><i>email:</i> <a href="mailto:<?= $email ?>"><?= $email ?></a></p>
       <p><i>телефон:</i> <a href="tel:<?= $phone ?>"><?= $phone ?></a></p>
-      <p> <i>Telegram:</i> <a href="https://t.me/<?= $tg ?>"> <? = $tg ?></a></p>
+      <p><i>telegram:</i> <a href="https://t.me/<?= $tg ?>"><?= $tg ?></a></p>
     </div>
 </section>
