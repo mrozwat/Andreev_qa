@@ -1,16 +1,16 @@
 <?php
-$title = 'Poc';
-$name = 'Неопознанный енот';
+$title = 'Андреев Сергей';
+$name = 'Андреев Сергей';
 $image = 'img/unknown-raccoon.svg';
-$email = 'enot_neopoznanniy@gmail.com';
-$phone = '+79876543210';
+$email = 'ozwatandreev@gmail.com';
+$phone = '+79373070241';
 $tg = 'OZwat';
 
 require('components/header.php');
-require('components/about.php');
 require('components/status.php');
+require('components/about.php');
+
 require('components/photos.php');
 require('components/news.php');
 require('components/quotes.php');
-require('components/contacts.php');
 require('components/footer.php');

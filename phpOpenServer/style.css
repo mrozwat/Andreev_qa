@@ -48,10 +48,10 @@ a:focus {
 .page-header .container {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-image: url("img/raccoons.svg");
+  background-image: url("img/ya2.png");
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 290px 212px;
+  background-size: 216px 288px;
 }
 
 .page-header a {
@@ -70,6 +70,7 @@ a:focus {
 
 .theme-button {
   position: relative;
+
   margin-top: 20px;
   padding-top: 7px;
   padding-right: 16px;

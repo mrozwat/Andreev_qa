@@ -9,9 +9,13 @@
 <body class="page">
   <header class="page-header">
     <div class="container">
+
       <h1 class="page-title"><?= $title ?></h1>
-      <p><i>По всем вопросам пишите:</i><br><a href="mailto:<?= $email ?>"><?= $email ?></a></p>
-      <button class="theme-button" type="button">Изменить тему</button>
+       <i>QA Engineer/Тестировщик</i>
+       <p><i>Email:</i> <a href="mailto:<?= $email ?>"><?= $email ?></a></p>
+      <p><i>Телефон:</i> <a href="tel:<?= $phone ?>"><?= $phone ?></a></p>
+      <p><i>Telegram:</i> <a href="https://t.me/<?= $tg ?>"><?= $tg ?></a></p>
+<button  class="theme-button" type="button"  >Изменить тему</button>
     </div>
   </header>
   <main>

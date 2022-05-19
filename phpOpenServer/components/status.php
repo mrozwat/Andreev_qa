@@ -1,4 +1,4 @@
 <section class="status container">
-  <h2 class="section-title">Мой статус</h2>
-  <p>#яжверстальщик!</p>
+  <h2 class="section-title">Статус</h2>
+  <p>В поиске работы</p>
 </section>
