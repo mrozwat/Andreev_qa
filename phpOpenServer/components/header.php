@@ -12,7 +12,12 @@
 
       <h1 class="page-title"><?= $title ?></h1>
        <i>QA Engineer/Тестировщик</i>
-       <p><i>Email:</i> <a href="mailto:<?= $email ?>"><?= $email ?></a></p>
+
+       <p >
+ 
+       <i>Email:</i> <a href="mailto:<?= $email ?>"><?= $email ?></a>
+       </p>
+
       <p><i>Телефон:</i> <a href="tel:<?= $phone ?>"><?= $phone ?></a></p>
       <p><i>Telegram:</i> <a href="https://t.me/<?= $tg ?>"><?= $tg ?></a></p>
 <button  class="theme-button" type="button"  >Изменить тему</button>

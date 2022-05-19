@@ -39,6 +39,10 @@ a:focus {
 }
 
 /* Шапка */
+
+
+
+
 .page-header {
   margin-bottom: 40px;
   background-color: #ffffff;
@@ -83,7 +87,15 @@ a:focus {
   color: #6653d9;
   border: 1px solid #6653d9;
 }
+.contacts{
+ position: relative;
 
+  margin-top: 0px;
+  padding-top: 0px;
+
+
+
+}
 .theme-button::before {
   position: absolute;
   content: "";
