@@ -11,15 +11,16 @@
     <div class="container">
 
       <h1 class="page-title"><?= $title ?></h1>
-       <i>QA Engineer/Тестировщик</i>
+      <div Class="info"><p > QA Engineer/Тестировщик</p>
+    <p >Возраст:<b>21год</b></p>
+    <p >Место житества: <b>г.Чебоксары</b></p>
+     </div>
+<div Class="info2">
+      <p> <i >Email:</i> <a href="mailto:<?= $email ?>"><?= $email ?></a> </p>
+      <p ><i>Телефон:</i> <a href="tel:<?= $phone ?>"><?= $phone ?></a></p>
+      <p ><i>Telegram:</i> <a href="https://t.me/<?= $tg ?>"><?= $tg ?></a></p>
+</div>
 
-       <p >
- 
-       <i>Email:</i> <a href="mailto:<?= $email ?>"><?= $email ?></a>
-       </p>
-
-      <p><i>Телефон:</i> <a href="tel:<?= $phone ?>"><?= $phone ?></a></p>
-      <p><i>Telegram:</i> <a href="https://t.me/<?= $tg ?>"><?= $tg ?></a></p>
 <button  class="theme-button" type="button"  >Изменить тему</button>
     </div>
   </header>

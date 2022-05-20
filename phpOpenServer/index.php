@@ -7,6 +7,7 @@ $phone = '+79373070241';
 $tg = 'OZwat';
 
 require('components/header.php');
+
 require('components/status.php');
 require('components/about.php');
 
