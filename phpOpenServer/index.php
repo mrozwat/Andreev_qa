@@ -1,5 +1,5 @@
 <?php
-$title = 'Андреев Сергей';
+$title = 'Резюме Andreev_qa';
 $name = 'Андреев Сергей';
 $image = 'img/unknown-raccoon.svg';
 $email = 'ozwatandreev@gmail.com';
