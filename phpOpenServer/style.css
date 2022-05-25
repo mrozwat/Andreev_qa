@@ -515,6 +515,12 @@ p.contacts-name {
 .skill-marketing {
   background-image: url("img/icon_marketing.svg");
 }
+.skill-soft {
+  background-image: url("img/icon_soft.svg");
+}
+.skill-dog {
+  background-image: url("img/icon_dog.svg");
+}
 .level {
   margin: 4px 0 16px;
   padding: 0;
@@ -556,4 +562,10 @@ p.contacts-name {
   height: 12px;
   background-color: #fea18d;
   border-radius: 6px;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
 }
