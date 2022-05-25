@@ -10,7 +10,7 @@ require('components/header.php');
 
 require('components/status.php');
 require('components/about.php');
-
+require('components/skils.php');
 require('components/photos.php');
 require('components/news.php');
 require('components/quotes.php');

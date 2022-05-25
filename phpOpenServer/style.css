@@ -394,6 +394,7 @@ p.contacts-name {
 .dark-theme {
   color: #f2f2f2;
   background-color: #17161a;
+  background-image: url("img/hero-bg.jpg");
 }
 
 .dark-theme .page-header {
@@ -452,4 +453,104 @@ p.contacts-name {
 .dark-theme .page-footer {
   background-color: #373540;
   color: #f2f2f2;
+}
+/*  Темная+светлая  тема скилов */
+.skills-list {
+  margin: 0;
+  padding: 0;
+}
+
+.skills-list dt {
+  padding-left: 32px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.skill-html {
+  background-image: url("img/icon-html.svg");
+}
+
+.skill-css {
+  background-image: url("img/icon-css.svg");
+}
+.skill-js {
+  background-image: url("img/Icon_js.svg");
+}
+.skill-php {
+  background-image: url("img/icon_php.svg");
+}
+.skill-sql {
+  background-image: url("img/icon_sql.svg");
+}
+.skill-json {
+  background-image: url("img/json_icon.svg");
+}
+.skill-api {
+  background-image: url("img/icon_api.svg");
+}
+.skill-post {
+  background-image: url("img/icon_post.svg");
+}
+.skill-git {
+  background-image: url("img/icon_git.svg");
+}
+.skill-android {
+  background-image: url("img/icon_android.svg");
+}
+.skill-proxy {
+  background-image: url("img/icon_proxy.svg");
+}
+.skill-jira {
+  background-image: url("img/icon_jira.svg");
+}
+.skill-linux {
+  background-image: url("img/icon_linux.svg");
+}
+.skill-qa {
+  background-image: url("img/icon_qa.svg");
+}
+.skill-marketing {
+  background-image: url("img/icon_marketing.svg");
+}
+.level {
+  margin: 4px 0 16px;
+  padding: 0;
+  height: 14px;
+  font-size: 0;
+  background-color: #ffffff;
+  border: 1px solid #86c3fa;
+  border-radius: 8px;
+}
+
+.level div {
+  margin: 1px;
+  height: 12px;
+  background-color: #288be6;
+  border-radius: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+ .dark-theme .level {
+  margin: 4px 0 16px;
+  padding: 0;
+  height: 14px;
+  font-size: 0;
+  background-color: #080208;
+  border: 1px solid #712073;
+  border-radius: 8px;
+}
+
+ .dark-theme .level div {
+  margin: 1px;
+  height: 12px;
+  background-color: #fea18d;
+  border-radius: 6px;
 }
