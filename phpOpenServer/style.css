@@ -5,6 +5,7 @@
 .container {
   width: 580px;
   margin: 0 auto;
+
 }
 
 .page {
@@ -13,12 +14,12 @@
   min-width: 640px;
   min-height: 100vh;
   margin: 0;
-  font-family: "Verdana", "Tahoma", sans-serif;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  color: #333333;
+  color:  #222222;
   background-color: #eae9f2;
-  background-image: url("img/white.jpg");
+  background-image: url("img/white3.jpg");
 }
 
 .section-title {
