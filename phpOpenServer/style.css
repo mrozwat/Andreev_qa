@@ -303,8 +303,8 @@ a:focus {
   border-radius: 0 32px;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
-  background-color: #6653d9;
+  color: #222222;
+  background-color: #ffffff;
 }
 
 .quotes blockquote::before {
@@ -366,8 +366,8 @@ p.contacts-name {
 
 /* Подвал */
 .page-footer {
-  color: #ffffff;
-  background-color: #6653d9;
+  color: #222222;
+  background-color: #FAEEDD;
 }
 
 .page-footer .container {
@@ -445,8 +445,8 @@ p.contacts-name {
 }
 
 .dark-theme .quotes blockquote {
-  color: #17161a;
-  background-color: #9484f2;
+  color: #ffffff;
+  background-color: #373540;
 }
 
 .dark-theme .quotes blockquote::before {
@@ -454,7 +454,7 @@ p.contacts-name {
 }
 
 .dark-theme .page-footer {
-  background-color: #373540;
+  background-color: #1F3438;
   color: #f2f2f2;
 }
 /*  Темная+светлая  тема скилов */

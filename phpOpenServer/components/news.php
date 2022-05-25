@@ -1,5 +1,5 @@
 <section class="news container">
-  <h2 class="section-title">Новости</h2>
+ <div class="center"> <h2 class="section-title">Оброзование и Курсы</h2></div>
   <article class="card">
     <img src="img/biceps.svg" width="56" height="56" alt="HTML">
     <div class="card-content">
