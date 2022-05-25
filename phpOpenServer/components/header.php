@@ -10,7 +10,7 @@
   <header class="page-header">
     <div class="container">
 
-      <h1 class="page-title"><?= $title ?></h1>
+      <h1 class="page-title">Андреев Сергей</h1>
 
       <div Class="info">
       <p > QA Engineer/Тестировщик</p>

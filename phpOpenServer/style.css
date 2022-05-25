@@ -18,6 +18,7 @@
   line-height: 18px;
   color: #333333;
   background-color: #eae9f2;
+  background-image: url("img/white.jpg");
 }
 
 .section-title {
@@ -45,8 +46,9 @@ a:focus {
 
 .page-header {
   margin-bottom: 40px;
-  background-color: #ffffff;
+  background-color: #FAEEDD;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
 }
 
 .page-header .container {
@@ -393,12 +395,12 @@ p.contacts-name {
 /* Тёмная тема */
 .dark-theme {
   color: #f2f2f2;
-  background-color: #17161a;
-  background-image: url("img/hero-bg.jpg");
+  background-color: #1F3438;
+  background-image: url("img/hero-bg2.jpg");
 }
 
 .dark-theme .page-header {
-  background-color: #3f3c53;
+  background-color:  #1F3438;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 

@@ -6,8 +6,8 @@ $email = 'ozwatandreev@gmail.com';
 $phone = '+79373070241';
 $tg = 'OZwat';
 
+require('components/metrika.php');
 require('components/header.php');
-
 require('components/status.php');
 require('components/about.php');
 require('components/skils.php');
