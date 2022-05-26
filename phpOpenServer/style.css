@@ -136,36 +136,7 @@ a:focus {
   background-image: url("img/moon-hover.svg");
 }
 
-/* Мини-шапка */
-.page-header--mini .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
-  background-image: none;
-}
 
-.page-header--mini .page-title {
-  margin-bottom: 0;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-}
-
-.page-header--mini .page-title::before {
-  content: "";
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin-right: 6px;
-  vertical-align: bottom;
-  background-image: url("img/logo_colored.svg");
-  background-repeat: no-repeat;
-}
-
-.page-header--mini .theme-button {
-  margin-top: 0;
-}
 
 /* Обо мне */
 .about {
@@ -538,15 +509,6 @@ p.contacts-name {
   border-radius: 6px;
 }
 
-
-
-
-
-
-
-
-
-
  .dark-theme .level {
   margin: 4px 0 16px;
   padding: 0;
@@ -568,4 +530,70 @@ p.contacts-name {
 }
 .center {
   text-align: center;
+}
+
+
+/* подробнее кнопка*/
+
+.button {
+  position: relative;
+  left: 460px;
+  margin-top: 20px;
+  padding-top: 7px;
+  padding-right: 16px;
+  padding-bottom: 7px;
+  padding-left: 36px;
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #6653d9;
+  border: 1px solid #6653d9;
+}
+.button::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 7px;
+  left: 12px;
+  background-image: url("img/icon_more.svg");
+}
+
+.button:active {
+  opacity: 0.8;
+}
+
+.button:focus,
+.button:hover {
+  color: #ffffff;
+  background-color: #6653d9;
+}
+.button:focus {
+  outline-color: #b6aaff;
+}
+
+.button:focus::before,
+.button:hover::before {
+  background-image: url("img/icon_more.svg");
+}
+
+.dark-theme .button {
+  color: #9484f2;
+  border: 1px solid #9484f2;
+}
+
+.dark-theme .button::before {
+  background-image: url("img/icon_more_dark.svg");
+}
+
+.dark-theme .button:focus,
+.dark-theme .button:hover {
+  color: #17161a;
+  background-color: #9484f2;
+}
+
+.dark-theme .button:focus::before,
+.dark-theme .button:hover::before {
+  background-image: url("img/icon_more_dark.svg");
 }

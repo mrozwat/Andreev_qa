@@ -12,7 +12,7 @@
     <dt class="skill-php">PHP</dt>
     <dd class="level"><div style="width: 10%;">10%</div></dd>
     <dt class="skill-sql">SQL</dt>
-    <dd class="level"><div style="width: 70%;">70%</div></dd>
+    <dd class="level"><div style="width: 50%;">50%</div></dd>
     <dt class="skill-json">Json</dt>
     <dd class="level"><div style="width: 80%;">80%</div></dd>
     <dt class="skill-api">Api(Rest/SOAP)</dt>
@@ -33,9 +33,10 @@
     <dd class="level"><div style="width: 90%;">90%</div></dd>
     <dt class="skill-marketing">Marketing(b2b,аналитика, арбитраж трафика,SEO,таргет+контекст)</dt>
     <dd class="level"><div style="width: 95%;">95%</div></dd>
+
   </dl>
   <div class="right">
- <a  target="_blank" href="!!!!!!Добавь ссылку  затупок" target="_blank">Подробнее</a>
+
 </div>
 </div>
 <dl class="skills-list">
@@ -45,4 +46,5 @@
     <dt class="skill-dog">Soft Skils(<a  href="https://photos.app.goo.gl/QhKbu2ptEqEC3zkh9" target="_blank">Собаки</a>)</dt>
     <dd class="level"><div style="width: 100%;">100%</div></dd>
 </dl>
+<button class="button" type="button">Подробнее</button>
 </section>
