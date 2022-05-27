@@ -62,5 +62,5 @@
     <dd class="level"><div style="width: 100%;">100%</div></dd>
     <div class="dis none"><p>Очень интересное описание моих html навыков</p></div>
 </dl>
-<button class="button" type="button"><a href="#skils">Подробнее</a></button>
+<a href="#skils"><button class="button" type="button">Подробнее</button></a>
 </section>
