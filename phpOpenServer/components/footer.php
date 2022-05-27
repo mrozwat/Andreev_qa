@@ -6,6 +6,6 @@
     </div>
   </footer>
   <script src="script.js"></script>
-
+ <script src="podrobno.js"></script>
 </body>
 </html>

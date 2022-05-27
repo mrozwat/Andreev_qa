@@ -537,12 +537,13 @@ p.contacts-name {
 
 .button {
   position: relative;
-  left: 460px;
+  top: -30px;
+  left: 500px;
   margin-top: 20px;
-  padding-top: 7px;
-  padding-right: 16px;
-  padding-bottom: 7px;
-  padding-left: 36px;
+  padding-top: 6px;
+  padding-right: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
   font-size: 12px;
   border-radius: 2px;
   background-color: transparent;
@@ -557,7 +558,7 @@ p.contacts-name {
   height: 15px;
   top: 7px;
   left: 12px;
-  background-image: url("img/icon_more.svg");
+
 }
 
 .button:active {
@@ -573,27 +574,17 @@ p.contacts-name {
   outline-color: #b6aaff;
 }
 
-.button:focus::before,
-.button:hover::before {
-  background-image: url("img/icon_more.svg");
-}
-
 .dark-theme .button {
   color: #9484f2;
   border: 1px solid #9484f2;
 }
 
-.dark-theme .button::before {
-  background-image: url("img/icon_more_dark.svg");
-}
 
 .dark-theme .button:focus,
 .dark-theme .button:hover {
   color: #17161a;
   background-color: #9484f2;
 }
-
-.dark-theme .button:focus::before,
-.dark-theme .button:hover::before {
-  background-image: url("img/icon_more_dark.svg");
+.none{
+  display: none;
 }
