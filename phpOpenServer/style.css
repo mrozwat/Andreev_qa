@@ -539,10 +539,10 @@ p.contacts-name {
   position: relative;
   left: 500px;
   margin-top: 5px;
-  padding-top: 7px;
-  padding-right: 6px;
-  padding-bottom: 7px;
-  padding-left: 6px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
   font-size: 12px;
   border-radius: 2px;
   background-color: transparent;
@@ -569,17 +569,40 @@ p.contacts-name {
   color: #ffffff;
   background-color: #6653d9;
 }
+.button2 {
+  position: relative;
+  left: 500px;
+  margin-top: 5px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #6653d9;
+  border: 1px solid #6653d9;
+}
+.button2::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 7px;
+  left: 12px;
+
+}
+
+.button2:active {
+  opacity: 0.8;
+}
 
 
-
-
-
-
-
-
-
-
-
+.button2:hover {
+  color: #ffffff;
+  background-color: #6653d9;
+}
 .none{
   display:none ;
 }
