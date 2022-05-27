@@ -537,12 +537,11 @@ p.contacts-name {
 
 .button {
   position: relative;
-  top: -30px;
   left: 500px;
-  margin-top: 20px;
-  padding-top: 6px;
+  margin-top: 5px;
+  padding-top: 7px;
   padding-right: 6px;
-  padding-bottom: 6px;
+  padding-bottom: 7px;
   padding-left: 6px;
   font-size: 12px;
   border-radius: 2px;
@@ -565,26 +564,22 @@ p.contacts-name {
   opacity: 0.8;
 }
 
-.button:focus,
+
 .button:hover {
   color: #ffffff;
   background-color: #6653d9;
 }
-.button:focus {
-  outline-color: #b6aaff;
-}
-
-.dark-theme .button {
-  color: #9484f2;
-  border: 1px solid #9484f2;
-}
 
 
-.dark-theme .button:focus,
-.dark-theme .button:hover {
-  color: #17161a;
-  background-color: #9484f2;
-}
+
+
+
+
+
+
+
+
+
 .none{
-  display: none;
+  display:none ;
 }

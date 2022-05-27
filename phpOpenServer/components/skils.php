@@ -1,5 +1,5 @@
 <section class="container">
-  <div class="skills">
+  <div class="skills" id="skils">
   <div class="center"> <h2>Мои навыки</h2></div>
   <h3><a href="https://github.com/mrozwat/Andreev_qa">Hard Skils</a></h3>
   <dl class="skills-list">
@@ -62,5 +62,5 @@
     <dd class="level"><div style="width: 100%;">100%</div></dd>
     <div class="dis none"><p>Очень интересное описание моих html навыков</p></div>
 </dl>
-<button class="button" type="button">Подробнее</button>
+<button class="button" type="button"><a href="#skils">Подробнее</a></button>
 </section>
