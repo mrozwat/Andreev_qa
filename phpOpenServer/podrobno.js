@@ -3,13 +3,11 @@ let elements = document.getElementsByClassName("dis"); //querySelectorAll мож
 let button = document.querySelector('.button');
 
 button.onclick = function () {
-
 for(let element of elements) {
    element.classList.toggle('none');
 }
-if( button.textContent.length > 8 ){button.textContent = 'свернуть'}
-else {button.textContent = 'подробнее'}
-
+if( button.textContent.length > 8 ){button.textContent = 'Свернуть'}
+else {button.textContent = 'Подробнее'}
 };
 
 //2 knopka
@@ -17,12 +15,11 @@ let elements2 = document.getElementsByClassName("dis2"); //querySelectorAll мо
 let button2 = document.querySelector('.button2');
 
 button2.onclick = function () {
-
 for(let element2 of elements2) {
    element2.classList.toggle('none');
-if( button.textContent.length > 8 ){button.textContent = 'свернуть'}
-else {button.textContent = 'подробнее'}
 }
+if( button2.textContent.length > 8 ){button2.textContent = 'Cвернуть'}
+else {button2.textContent = 'Подробнее'}
 };
 
 // Мда, не код а пздц
