@@ -22,7 +22,7 @@ if( button2.textContent.length > 8 ){button2.textContent = 'Cвернуть'}
 else {button2.textContent = 'Подробнее'}
 };
 
-// Мда, не код а пздц
+// Мда, не код а пздц. Нужно переделать через индексы кнопок [0] [1], но пока и так работает (всего 2 кнопки)
 
 /*
 button.onclick = function () {

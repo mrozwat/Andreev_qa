@@ -1,10 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
+  
 }
 
 .container {
   width: 580px;
   margin: 0 auto;
+
 
 }
 
@@ -20,6 +26,8 @@
   color:  #222222;
   background-color: #eae9f2;
   background-image: url("img/white3.jpg");
+
+
 }
 
 .section-title {
@@ -605,4 +613,33 @@ p.contacts-name {
 }
 .none{
   display:none ;
+}
+
+/* upbutton*/
+.up-button {
+  background-image:url("img/icon_up.svg");
+  background-color: transparent !important;
+  position: fixed;
+  z-index: 10;
+  padding: 0;
+  bottom: 75px;
+  right: 150px;
+  width: 64px;
+  height: 64px;
+   border: none;
+  text-align: center;
+  vertical-align: middle;
+
+
+  display: none;
+  cursor: pointer;
+}
+.dark-theme .up-button {
+  background-color: transparent !important;
+}
+
+
+
+.shown {
+  display: inline-block;
 }

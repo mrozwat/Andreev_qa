@@ -13,3 +13,9 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/88894776" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+<button class="up-button " type="button">
+
+    <span class="visually-hidden"></span>
+  </button>
+  <script src="up-button.js"></script>
