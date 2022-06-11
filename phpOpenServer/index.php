@@ -12,7 +12,7 @@ require('components/status.php');
 require('components/about.php');
 require('components/skils.php');
 require('components/photos.php');
-require('components/news.php');
+require('components/education.php');
 require('components/quotes.php');
 require('components/footer.php');
 require('components/metrika.php');
