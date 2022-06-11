@@ -5,13 +5,14 @@
   <dl class="skills-list">
     <dt class="skill-html">HTML</dt>
     <dd class="level"><div style="width: 70%;">70%</div></dd>
-
     <dt class="skill-css">CSS</dt>
     <dd class="level"><div style="width: 60%;">60%</div></dd>
+    <div class="dis none"><p>Очень интересное описание моих html навыков</p></div>
      <dt class="skill-js">JS</dt>
-    <dd class="level"><div style="width: 30%;">30%</div></dd>
+    <dd class="level"><div style="width: 50%;">50%</div></dd>
     <dt class="skill-json">Json</dt>
     <dd class="level"><div style="width: 80%;">80%</div></dd>
+    <div class="dis none"><p>Очень интересное описание моих html навыков</p></div>
     <dt class="skill-php">PHP</dt>
     <dd class="level"><div style="width: 10%;">10%</div></dd>
     <div class="dis none"><p>Очень интересное описание моих html навыков</p></div>
