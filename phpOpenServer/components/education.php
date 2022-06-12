@@ -49,5 +49,11 @@
     </div>
   </article>
 
-
+  <article class="card">
+    <img src="img/book-svgrepo-com.svg" width="56" height="56" alt="HTML">
+    <div class="card-content">
+      <h3>Онлайн учебник learn.javascript.ru    </h3>
+      <p>Тест пройден на 60% за 9 минут </p>
+    </div>
+  </article>
 </section>

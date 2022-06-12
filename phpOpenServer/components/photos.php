@@ -1,5 +1,5 @@
 <section class="photos container">
-  <h2 class="section-title">Мои фотографии</h2>
+  <h2 class="section-title center">Полезные ссылки</h2>
   <figure>
     <img src="img/photo1.jpg" width="285" height="146" alt="Сайт инструктора Кекса">
     <figcaption>Сайт инструктора Кекса</figcaption>
