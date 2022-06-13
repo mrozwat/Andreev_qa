@@ -9,6 +9,14 @@
     </div>
   </article>
   <article class="card">
+    <img src="img/youtube-svgrepo-com.svg" width="56" height="56" alt="HTML">
+    <div class="card-content">
+      <h3>YouTube Qa курсы </h3>
+      <p>Курсы от: Алексей Маршала и Artsiom Rusau QA</p>
+      
+    </div>
+  </article>
+  <article class="card">
     <img src="img/nix.jpg" width="56" height="56" alt="HTML">
     <div class="card-content">
       <h3>NIX Education </h3>
