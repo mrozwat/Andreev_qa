@@ -14,7 +14,7 @@
 
       <div Class="info">
       <p > QA Engineer/Тестировщик</p>
-    <p >Возраст:<b>21год</b></p>
+    <p >Возраст:<b> 21год</b></p>
     <p >Место жительства: <a target="_blank" href="https://www.google.ru/maps/place/%D0%A7%D0%B5%D0%B1%D0%BE%D0%BA%D1%81%D0%B0%D1%80%D1%8B,+%D0%A7%D1%83%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%B0%D1%8F+%D0%A0%D0%B5%D1%81%D0%BF./@56.1042955,47.1893787,12z/data=!3m1!4b1!4m5!3m4!1s0x415a37f37d16e915:0x7174067761ec11d9!8m2!3d56.1168498!4d47.2628403"><b>г.Чебоксары</b></a></p>
      </div>
 

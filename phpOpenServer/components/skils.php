@@ -1,7 +1,7 @@
 <section class="container">
   <div class="skills" id="skils">
   <div class="center"> <h2>Мои навыки</h2></div>
-  <h3><a href="https://github.com/mrozwat/Andreev_qa">Hard Skils</a></h3>
+  <h3><a target="_blank" href="https://github.com/mrozwat/Andreev_qa">Hard Skils</a></h3>
   <dl class="skills-list">
     <dt class="skill-html">HTML</dt>
     <dd class="level"><div style="width: 70%;">70%</div></dd>
@@ -51,10 +51,10 @@
 </div>
 </div>
 <dl class="skills-list">
-<h3><a href="https://docs.google.com/forms/d/e/1FAIpQLSeviwjzFrvLCsf3QMuBSdF-rkf3QUsYKCUnMcrU4vkcWg032g/viewscore?viewscore=AE0zAgD3TFiEla__0SGhvWUhQpIsKxyPt6fXc6c7S5aU49SGSPerzYTkyZ81Vq9lsUqQf0k">Soft Skils</a></h3>
+<h3><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeviwjzFrvLCsf3QMuBSdF-rkf3QUsYKCUnMcrU4vkcWg032g/viewscore?viewscore=AE0zAgD3TFiEla__0SGhvWUhQpIsKxyPt6fXc6c7S5aU49SGSPerzYTkyZ81Vq9lsUqQf0k">Soft Skils</a></h3>
 <dt class="skill-soft">Soft Skils(Люди)</dt>
     <dd class="level"><div style="width: 75%;">75%</div></dd>
-    <dt class="skill-dog">Soft Skils(<a  href="https://photos.app.goo.gl/QhKbu2ptEqEC3zkh9" target="_blank">Собаки</a>)</dt>
+    <dt class="skill-dog">Soft Skils(<a target="_blank" href="https://photos.app.goo.gl/QhKbu2ptEqEC3zkh9" target="_blank">Собаки</a>)</dt>
     <dd class="level"><div style="width: 100%;">100%</div></dd>
     <div class="dis none"><p>Очень интересное описание моих html навыков</p></div>
 </dl>
