@@ -42,3 +42,33 @@ case 2:
 case 3:console.log('Вы ввели число 2, а может и 3');
 break;
 };
+
+// function checkAge(age) {
+//     if (age > 18) {
+//       return true;
+//     } else {
+//       return confirm('Родители разрешили?');
+//     }
+// //   }
+
+function checkage (age) {
+return (age>18) || confirm('Получается школьник ?')
+};
+// Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
+
+function getMinNumber (num, num2) {
+if(num>num2){return num2}
+else{return num}
+};
+// Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
+function pow (x,n){
+    if (n<1) {return alert('так не умею')}
+    else {
+let powReturn=x;
+for (let i =0; i<n;i++){ //Можно через **, но так не интересно
+powReturn*=x; 
+}
+}
+return powReturn;
+};
+

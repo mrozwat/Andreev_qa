@@ -64,4 +64,11 @@
       <p>Тест пройден на 60% за 9 минут </p>
     </div>
   </article>
+  <article class="card">
+    <img src="img/html.png" width="56" height="56" alt="HTML">
+    <div class="card-content">
+      <h3>HTML Academy. Курс JavaScript. Профессиональная разработка веб-интерфейсов   </h3>
+      <p>2 месячный курс за 4 дня. <a href='https://ozwat.ru/inst/'>Проект ozwat.ru/inst</a> </p>
+    </div>
+  </article>
 </section>

@@ -22,7 +22,7 @@
       <p> <i >Email:</i> <a href="mailto:<?= $email ?>"><?= $email ?></a> </p>
       <p ><i>Телефон:</i> <a href="tel:<?= $phone ?>"><?= $phone ?></a></p>
       <p ><i>Telegram:</i> <a target="_blank" href="https://t.me/<?= $tg ?>"><?= $tg ?></a></p>
-       <p ><i>GitHub:</i> <a target="_blank" href="https://github.com/mrozwat/Andreev_qa">mrozwat</a></p>
+       <p ><i>GitHub:</i> <a target="_blank" href="https://github.com/mrozwat">mrozwat</a></p>
        <p ><i>Сайт:</i> <a target="_blank" href="https://ozwat.ru">ozwat.ru</a></p>
 </div>
 
